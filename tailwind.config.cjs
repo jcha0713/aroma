@@ -1,6 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+/* eslint @typescript-eslint/no-var-requires: "off" */
+const { typewindTransforms } = require("typewind/transform");
+
+/** @type {import('tailwindcss').Config} \*/
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: {
+    files: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+    transform: typewindTransforms,
+  },
   theme: {
     extend: {},
   },

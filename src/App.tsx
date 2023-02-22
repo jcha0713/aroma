@@ -1,5 +1,15 @@
+import { tw } from "typewind";
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold bg-cyan-800 text-white">Hello world!</h1>
+    <div
+      className={tw.flex.items_center.justify_center.h_[
+        "5em"
+      ].bg_white.text_black.dark(tw.bg_black.text_white)}
+    >
+      <h1 className={tw.text_xl.sm(tw.text_3xl).md(tw.text_4xl).font_bold}>
+        Hello World
+      </h1>
+    </div>
   );
 }
