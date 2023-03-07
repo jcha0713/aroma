@@ -1,5 +1,4 @@
 import { tw } from "typewind";
-import Masonry from "./components/masonry/Masonry";
 
 export default function App() {
   return (
@@ -11,7 +10,6 @@ export default function App() {
       <h1 className={tw.text_xl.sm(tw.text_3xl).md(tw.text_4xl).font_bold}>
         Hello World
       </h1>
-      <Masonry />
     </div>
   );
 }
