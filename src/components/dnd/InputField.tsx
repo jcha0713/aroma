@@ -1,4 +1,5 @@
 import React, { useRef, Dispatch, SetStateAction, FormEvent } from "react";
+import { tw } from "typewind";
 
 interface props {
   todo: string;
@@ -22,8 +23,14 @@ const InputField: React.FC<props> = ({ todo, setTodo, handleAdd }) => {
         value={todo}
         ref={inputRef}
         onChange={(e) => setTodo(e.target.value)}
+        className={tw.w_96.px_2.py_3.rounded_md.shadow_lg}
       />
-      <button type="submit">ENTER</button>
+      <button
+        type="submit"
+        className={tw.h_12.ml_4.p_3.border.border_aromaGray_400}
+      >
+        ENTER
+      </button>
     </form>
   );
 };

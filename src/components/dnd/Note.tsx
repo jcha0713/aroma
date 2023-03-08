@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Dispatch, SetStateAction } from "react";
 import { useRef } from "react";
 import { Draggable } from "@hello-pangea/dnd";
+import { tw } from "typewind";
 
 export interface INote {
   id: number;
@@ -38,6 +39,10 @@ const Note: React.FC<{
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           ref={provided.innerRef}
+          className={
+            tw.w_60.max_w_["15rem"].max_h_fit.min_h_["104px"].bg_green_400
+              .border
+          }
         >
           {edit ? (
             <input

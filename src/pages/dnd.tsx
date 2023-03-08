@@ -3,6 +3,7 @@ import InputField from "../components/dnd/InputField";
 import Notes from "../components/dnd/Notes";
 import { DragDropContext, DropResult } from "@hello-pangea/dnd";
 import { INote } from "../components/dnd/Note";
+import { tw } from "typewind";
 
 const DndPage: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
@@ -59,7 +60,7 @@ const DndPage: React.FC = () => {
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <div className="App">
+      <div>
         <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
         <Notes
           todos={todos}

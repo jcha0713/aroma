@@ -17,11 +17,11 @@ const TodoList: React.FC<props> = ({
   setCompletedTodos,
 }) => {
   return (
-    <div>
+    <div className={tw.flex.pt_4}>
       <Droppable droppableId="TodosList">
         {(provided) => (
           <div ref={provided.innerRef} {...provided.droppableProps}>
-            <span>Column 1</span>
+            <span className={tw.opacity_0}>Column 1</span>
             {todos?.map((todo, index) => (
               <Note
                 index={index}
@@ -38,7 +38,7 @@ const TodoList: React.FC<props> = ({
       <Droppable droppableId="TodosRemove">
         {(provided) => (
           <div ref={provided.innerRef} {...provided.droppableProps}>
-            <span>Column 2</span>
+            <span className={tw.opacity_0}>Column 2</span>
             {CompletedTodos?.map((todo, index) => (
               <Note
                 index={index}
